@@ -1,0 +1,83 @@
+= simple_form_for @registration do |f|
+  h3.text-center KARTA KWALIFIKACYJNA UCZESTNIKA WYPOCZYNKU
+
+  h3 I. INFORMACJE DOTYCZĄCE WYPOCZYNKU
+  p 1. Forma wypoczynku: półkolonia
+  p 2. Termin wypoczynku 25.06.2018 r. – 10.08.2018 r.
+  p 3. Adres wypoczynku, miejsce lokalizacji wypoczynku
+  ol
+    li Szkoła Podstawowa nr 3 im. Marszałka Józefa Piłsudskiego 05-071 Sulejówek ul. Głowackiego 47
+    li Szkoła Podstawowa nr 1 im. Pierwszego Marszałka Polski Józefa Piłsudskiego 05-070 Sulejówek ul. Idzikowskiego 2a
+
+  .row
+    .col-6.text-center
+      p ..........................................
+      p
+        | (miejscowość, data)
+    .col-6.text-center
+      p ..........................................
+      p
+        | (podpis organizatora wypoczynku)
+
+
+  h3 II. WNIOSEK RODZICÓW (OPIEKUNÓW) O SKIEROWANIE UCZESTNIKA NA WYPOCZYNEK
+  p 1. Zgłaszam pobyt uczestnika w placówce (zaznaczyć wybrane miejsce wypoczynku dziecka):
+  ul [place]
+    li Szkoła Podstawowa nr 3 im. Marszałka Józefa Piłsudskiego 05-071 Sulejówek ul. Głowackiego 47
+    li Szkoła Podstawowa nr 1 im. Pierwszego Marszałka Polski Józefa Piłsudskiego 05-070 Sulejówek ul. Idzikowskiego 2a
+  p 2. Zgłaszam pobyt uczestnika (podać okres od dnia do dnia lub wyszczególnić poszczególne dni):
+  p.ml-3 w dniach [days]
+  p.ml-3 lub od dnia [day_from] do dnia [day_to]
+
+  p 3. Powrót do domu (zaznaczyć odpowiednio):
+  ul [return_home]
+    li uczestnik samodzielnie wraca do domu,
+    li uczestnik będzie odbierany przez (proszę wpisać imię i nazwisko oraz numer telefonu kontaktowego osoby ):
+
+  h3 III. INFORMACJE DOTYCZĄCE UCZESTNIKA WYPOCZYNKU
+  p 1. Imię (imiona) i nazwisko [full_name]
+  p 2. Rok urodzenia [birth_year:integer]
+  p 3. Adres zamieszkania [address]
+  p 4. Nazwa i adres szkoły, do której dziecko uczęszcza w roku szkolnym 2017/2018 [school_name] klasa [group_name]
+  p 5. Imiona i nazwiska rodziców [parents_names]
+  p 6. Adres zamieszkania lub pobytu rodziców w czasie trwania wypoczynku
+  p 7. Numer telefonu rodziców oraz adres e-mail niezbędny do korespondencji
+  p 8. Informacja o specjalnych potrzebach edukacyjnych uczestnika wypoczynku,  w szczególności o potrzebach wynikających z niepełnosprawności, niedostosowania społecznego lub zagrożenia niedostosowaniem społecznym [special_needs]
+  p 9. Istotne dane o stanie zdrowia uczestnika wypoczynku, rozwoju psychofizycznym i stosowanej diecie (np. na co uczestnik jest uczulony, jak znosi jazdę samochodem, czy przyjmuje stale leki i w jakich dawkach, czy nosi aparat ortodontyczny lub okulary, czy może brać udział w zajęciach rekreacyjnych, czy nie ma przeciwwskazań lekarskich do ćwiczeń ruchowych, w tym do pływania) [health_status] o szczepieniach ochronnych (wraz z podaniem roku lub przedstawienie książeczki zdrowia z aktualnym wpisem szczepień):
+  p tężec: [tezec]
+  p błonica: [blonnica]
+  p dur: [dur]
+  p inne: [vaccine_other]
+  p oraz numer PESEL uczestnika wypoczynku [pesel]
+
+  p.bold Wyrażam zgodę na przetwarzanie danych osobowych zawartych w karcie kwalifikacyjnej na potrzeby niezbędne do zapewnienia bezpieczeństwa i ochrony zdrowia uczestnika wypoczynku (zgodnie z ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2016 r. poz. 922, z późn. zm.).
+
+  .row
+    .col-4.text-center
+      p ..........................................
+      p
+        | (data)
+    .col-8.text-center
+      p ..........................................
+      p
+        | (podpis rodziców  uczestnika wypoczynku)
+
+
+  p Ja niżej podpisany(a) oświadczam, że:
+  ol
+    li podałam(em) wszystkie znane mi informacje o dziecku, które mogą pomóc w zapewnieniu właściwej opieki dziecku w czasie trwania wypoczynku;
+    li wyrażam zgodę na przetwarzanie danych osobowych mojego dziecka w celu udzielenia wsparcia, realizacji wypoczynku, ewaluacji, kontroli, monitoringu i sprawozdawczości;
+    li wyrażam zgodę na publikację wizerunku mojego dziecka w celach informacyjno-promocyjnych związanych z wypoczynkiem i jednocześnie wyrażam zgodę na wykonywanie zdjęć i innych czynności dokumentujących udział mojego dziecka w wypoczynku oraz na przetwarzanie teraz i w przyszłości przez Miasto Sulejówek wszelkich dokumentów przedstawiających wizerunek mojego dziecka (zdjęcia itp.) w celach upublicznienia i promocji wypoczynku w takich mediach jak: wydawnictwa promocyjne, Internet, prasa itp.;
+    li ponoszę pełną odpowiedzialność za bezpieczeństwo mojego dziecka w drodze do miejsca oraz z miejsca odbywania zajęć, w przypadku wyjazdów do i z miejsca zbiórki;
+    li zapoznałem/łam się i akceptuję treść regulaminu wypoczynku;
+    li jestem świadomy o odpowiedzialności za składanie oświadczeń niezgodnych z prawdą.
+
+  .row
+    .col-4.text-center
+      p ..........................................
+      p
+        | (data)
+    .col-8.text-center
+      p ..........................................
+      p
+        | (podpis rodziców  uczestnika wypoczynku)
