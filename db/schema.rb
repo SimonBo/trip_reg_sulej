@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20180503125630) do
     t.string "dur"
     t.string "vaccine_other"
     t.string "pesel"
+    t.string "return_home_guardian"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

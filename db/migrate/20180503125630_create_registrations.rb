@@ -19,6 +19,7 @@ class CreateRegistrations < ActiveRecord::Migration[5.1]
       t.string :dur
       t.string :vaccine_other
       t.string :pesel
+      t.string :return_home_guardian
 
       t.timestamps
     end
