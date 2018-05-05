@@ -1,7 +1,5 @@
-scss:
-  input.form-control {
-  }
 = simple_form_for @registration do |f|
+  = f.error_notification
   h3.text-center KARTA KWALIFIKACYJNA UCZESTNIKA WYPOCZYNKU
 
   h3 I. INFORMACJE DOTYCZĄCE WYPOCZYNKU
@@ -28,28 +26,31 @@ scss:
   = f.input :place, collection: Registration::PLACES, as: :radio_buttons, label: ''
 
   p 2. Zgłaszam pobyt uczestnika (podać okres od dnia do dnia lub wyszczególnić poszczególne dni):
-  p.ml-3 w dniach #{ f.input :days, wrapper: false, label: false }
-  p.ml-3 lub od dnia #{ f.input_field :day_from } do dnia #{ f.input_field :day_to }
+  p.ml-3 w dniach #{ f.input :days, wrapper: false, label: false, error: false }
+  p.ml-3 lub od dnia #{ f.input :day_from, wrapper: false, label: false, error: false } do dnia #{ f.input :day_to, wrapper: false, label: false, error: false }
 
   p 3. Powrót do domu (zaznaczyć odpowiednio):
   = f.input :return_home, collection: Registration::RETURN_HOME, as: :radio_buttons, label: ''
-  = f.input :return_home_guardian, label: false
+  = f.input :return_home_guardian, label: false, error: false
 
   h3 III. INFORMACJE DOTYCZĄCE UCZESTNIKA WYPOCZYNKU
-  p 1. Imię (imiona) i nazwisko #{ f.input_field :full_name }
-  p 2. Rok urodzenia #{ f.input_field :birth_year }
-  p 3. Adres zamieszkania #{ f.input_field :address }
-  p 4. Nazwa i adres szkoły, do której dziecko uczęszcza w roku szkolnym 2017/2018 #{ f.input_field :school_name } klasa #{ f.input_field :group_name }
-  p 5. Imiona i nazwiska rodziców #{ f.input_field :parents_names }
-  p 6. Adres zamieszkania lub pobytu rodziców w czasie trwania wypoczynku
-  p 7. Numer telefonu rodziców oraz adres e-mail niezbędny do korespondencji
-  p 8. Informacja o specjalnych potrzebach edukacyjnych uczestnika wypoczynku,  w szczególności o potrzebach wynikających z niepełnosprawności, niedostosowania społecznego lub zagrożenia niedostosowaniem społecznym #{ f.input_field :special_needs }
-  p 9. Istotne dane o stanie zdrowia uczestnika wypoczynku, rozwoju psychofizycznym i stosowanej diecie (np. na co uczestnik jest uczulony, jak znosi jazdę samochodem, czy przyjmuje stale leki i w jakich dawkach, czy nosi aparat ortodontyczny lub okulary, czy może brać udział w zajęciach rekreacyjnych, czy nie ma przeciwwskazań lekarskich do ćwiczeń ruchowych, w tym do pływania) #{ f.input_field :health_status } o szczepieniach ochronnych (wraz z podaniem roku lub przedstawienie książeczki zdrowia z aktualnym wpisem szczepień):
-  p tężec: #{ f.input_field :tezec }
-  p błonica: #{ f.input_field :blonnica }
-  p dur: #{ f.input_field :dur }
-  p inne: #{ f.input_field :vaccine_other }
-  p oraz numer PESEL uczestnika wypoczynku #{ f.input_field :pesel }
+  p 1. Imię (imiona) i nazwisko #{ f.input :full_name, wrapper: false, label: false, error: false }
+  p 2. Rok urodzenia #{ f.input :birth_year, wrapper: false, label: false, error: false }
+  p 3. Adres zamieszkania #{ f.input :address, wrapper: false, label: false, error: false }
+  p 4. Nazwa i adres szkoły, do której dziecko uczęszcza w roku szkolnym 2017/2018 #{ f.input :school_name, wrapper: false, label: false, error: false } klasa #{ f.input :group_name, wrapper: false, label: false, error: false }
+  p 5. Imiona i nazwiska rodziców #{ f.input :parents_names, wrapper: false, label: false, error: false }
+  p 6. Adres zamieszkania lub pobytu rodziców w czasie trwania wypoczynku #{ f.input :parents_address, wrapper: false, label: false, error: false }
+  p
+    | 7. Numer
+    b telefonu
+    | kontaktowego rodziców #{ f.input :phone_number, wrapper: false, label: false, error: false }
+  p
+    | 8.
+    b Adres e-mail
+    | niezbędny do korespondencji #{ f.input :email, wrapper: false, label: false, error: false }
+  p 9. Informacja o specjalnych potrzebach edukacyjnych uczestnika wypoczynku,  w szczególności o potrzebach wynikających z niepełnosprawności, niedostosowania społecznego lub zagrożenia niedostosowaniem społecznym #{ f.input :special_needs, wrapper: false, label: false, error: false }
+  p 10. Istotne dane o stanie zdrowia uczestnika wypoczynku, rozwoju psychofizycznym i stosowanej diecie (np. na co uczestnik jest uczulony, jak znosi jazdę samochodem, czy przyjmuje stale leki i w jakich dawkach, czy nosi aparat ortodontyczny lub okulary, czy może brać udział w zajęciach rekreacyjnych, czy nie ma przeciwwskazań lekarskich do ćwiczeń ruchowych, w tym do pływania) #{ f.input :health_status, wrapper: false, label: false, error: false }
+  p oraz numer PESEL uczestnika wypoczynku #{ f.input :pesel, wrapper: false, label: false, error: false }
 
   p.bold Wyrażam zgodę na przetwarzanie danych osobowych zawartych w karcie kwalifikacyjnej na potrzeby niezbędne do zapewnienia bezpieczeństwa i ochrony zdrowia uczestnika wypoczynku (zgodnie z ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2016 r. poz. 922, z późn. zm.).
 

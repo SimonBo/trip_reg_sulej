@@ -21,25 +21,7 @@ class RegistrationsController < ApplicationController
 
   def registration_params
     params.require(:registration).permit(
-      :place,
-      :days,
-      :day_from,
-      :day_to,
-      :return_home,
-      :full_name,
-      :birth_year,
-      :address,
-      :school_name,
-      :group_name,
-      :parents_names,
-      :special_needs,
-      :health_status,
-      :tezec,
-      :blonnica,
-      :dur,
-      :vaccine_other,
-      :pesel,
-      :return_home_guardian
+      Registration.attribute_names
       )
   end
 end

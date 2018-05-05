@@ -14,12 +14,11 @@ class CreateRegistrations < ActiveRecord::Migration[5.1]
       t.string :parents_names
       t.string :special_needs
       t.string :health_status
-      t.string :tezec
-      t.string :blonnica
-      t.string :dur
-      t.string :vaccine_other
       t.string :pesel
       t.string :return_home_guardian
+      t.string :parents_address
+      t.string :email
+      t.string :phone_number
 
       t.timestamps
     end

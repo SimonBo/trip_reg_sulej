@@ -22,11 +22,11 @@ class Registration < ApplicationRecord
             :parents_names,
             :special_needs,
             :health_status,
-            :tezec,
-            :blonnica,
-            :dur,
-            :vaccine_other,
             :pesel,
             :return_home_guardian,
-            presence: true
+            :email,
+            :phone_number,
+            :parents_address,
+            presence: { message: "pole jest obowiązkowe" }
+   validates :pesel, pesel: true
 end

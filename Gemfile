@@ -52,3 +52,4 @@ group :test do
   gem 'launchy'
 end
 gem 'simple_form'
+gem 'activepesel'
