@@ -28,5 +28,5 @@ class Registration < ApplicationRecord
             :phone_number,
             :parents_address,
             presence: { message: "pole jest obowiązkowe" }
-   validates :pesel, pesel: true
+   validates :pesel, pesel: { message: 'nie jest prawidłowym numerem PESEL' }
 end

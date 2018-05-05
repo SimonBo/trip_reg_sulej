@@ -11,6 +11,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new(registration_params)
 
     if @registration.save
+      ActionMailer.send_card(registration: @registration).deliver_later
       redirect_to registrations_path
     else
       render :new
