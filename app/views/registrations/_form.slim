@@ -1,4 +1,5 @@
 - hide_submit = local_assigns.fetch :hide_submit, false
+- for_pdf = local_assigns.fetch :for_pdf, false
 
 = simple_form_for @registration, url: registrations_path do |f|
   = f.error_notification
@@ -12,15 +13,23 @@
     li Szkoła Podstawowa nr 3 im. Marszałka Józefa Piłsudskiego 05-071 Sulejówek ul. Głowackiego 47
     li Szkoła Podstawowa nr 1 im. Pierwszego Marszałka Polski Józefa Piłsudskiego 05-070 Sulejówek ul. Idzikowskiego 2a
 
-  .row
-    .col-6.text-center
-      p ..........................................
-      p
-        | (miejscowość, data)
-    .col-6.text-center
-      p ..........................................
-      p
-        | (podpis organizatora wypoczynku)
+  - if for_pdf
+    p.text-center
+      span ..........................................
+      span style='margin-left: 100px;' ..........................................
+    p.text-center
+      span style='margin-left: 30px;' (miejscowość, data)
+      span style='margin-left: 100px;' (podpis organizatora wypoczynku)
+  - else
+    .row
+      .col-6.text-center
+        p ..........................................
+        p
+          | (miejscowość, data)
+      .col-6.text-center
+        p ..........................................
+        p
+          | (podpis organizatora wypoczynku)
 
 
   h3 II. WNIOSEK RODZICÓW (OPIEKUNÓW) O SKIEROWANIE UCZESTNIKA NA WYPOCZYNEK
@@ -56,15 +65,23 @@
 
   p.bold Wyrażam zgodę na przetwarzanie danych osobowych zawartych w karcie kwalifikacyjnej na potrzeby niezbędne do zapewnienia bezpieczeństwa i ochrony zdrowia uczestnika wypoczynku (zgodnie z ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2016 r. poz. 922, z późn. zm.).
 
-  .row
-    .col-4.text-center
-      p ..........................................
+  .row style='margin-top: 50px;'
+    - if for_pdf
       p
-        | (data)
-    .col-8.text-center
-      p ..........................................
+        span .....................
+        span style='margin-left: 100px;' ....................................................................................
       p
-        | (podpis rodziców  uczestnika wypoczynku)
+        span style='margin-left: 30px;' data
+        span style='margin-left: 160px;' (podpis rodziców  uczestnika wypoczynku)
+    - else
+      .col-4.text-center
+        p .....................
+        p
+          | (data)
+      .col-8.text-center
+        p ....................................................................................
+        p
+          | (podpis rodziców  uczestnika wypoczynku)
 
 
   p Ja niżej podpisany(a) oświadczam, że:
@@ -76,15 +93,23 @@
     li zapoznałem/łam się i akceptuję treść regulaminu wypoczynku;
     li jestem świadomy o odpowiedzialności za składanie oświadczeń niezgodnych z prawdą.
 
-  .row
-    .col-4.text-center
-      p ..........................................
+  .row style='margin-top: 50px;'
+    - if for_pdf
       p
-        | (data)
-    .col-8.text-center
-      p ..........................................
+        span .....................
+        span style='margin-left: 100px;' ....................................................................................
       p
-        | (podpis rodziców  uczestnika wypoczynku)
+        span style='margin-left: 30px;' (data)
+        span style='margin-left: 160px;' (podpis rodziców  uczestnika wypoczynku)
+    - else
+      .col-4.text-center
+        p ..........................................
+        p
+          | (data)
+      .col-8.text-center
+        p ..........................................
+        p
+          | (podpis rodziców  uczestnika wypoczynku)
   - unless hide_submit
     .text-center.mt-5
       = f.submit 'Wyślij zgłoszenie', class: 'btn btn-primary mb-5'
