@@ -1,1 +1,248 @@
 pl:
+  date:
+    abbr_day_names:
+    - nie
+    - pon
+    - wto
+    - śro
+    - czw
+    - pią
+    - sob
+    abbr_month_names:
+    -
+    - sty
+    - lut
+    - mar
+    - kwi
+    - maj
+    - cze
+    - lip
+    - sie
+    - wrz
+    - paź
+    - lis
+    - gru
+    day_names:
+    - niedziela
+    - poniedziałek
+    - wtorek
+    - środa
+    - czwartek
+    - piątek
+    - sobota
+    formats:
+      brackets: "%d/%m/%Y"
+      date: '%d/%m/%Y'
+      date_dot: '%d.%m.%Y'
+      dnia: "%d.%m.%Y o godzinie %H:%M"
+      hour: '%H:%M'
+      default: ! '%d-%m-%Y'
+      long: ! '%B %d, %Y'
+      short: ! '%d %b'
+      day_month: '%-d %B'
+      month: '%B'
+      with_month_name: '%e %B %Y'
+      slashed: '%d-%m-%Y'
+      day_month_in_words: '%d %B'
+
+
+    month_names:
+    -
+    - styczeń
+    - luty
+    - marzec
+    - kwiecień
+    - maj
+    - czerwiec
+    - lipiec
+    - sierpień
+    - wrzesień
+    - październik
+    - listopad
+    - grudzień
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        few: Pozostały %{count} godziny
+        one: Pozostało około godziny
+        other: Pozostało %{count} godzin
+        many: Pozostało %{count} godzin
+      about_x_months:
+        few: Pozostały %{count} miesiące
+        one: Pozostał miesiąc
+        other: Pozostało %{count} miesięcy
+        many: Pozostało %{count} miesięcy
+      about_x_years:
+        few: Pozostały %{count} lata
+        one: Pozostał rok
+        other: Pozostało %{count} lat
+        many: Pozostało %{count} lat
+      almost_x_years:
+        few: Pozostały prawie %{count} lata
+        one: Pozostał prawie rok
+        other: Pozostało prawie %{count} lat
+        many: Pozostało prawie %{count} lat
+      half_a_minute: Pozostało pół minuty
+      less_than_x_minutes:
+        few: Pozostało mniej niż %{count} minuty
+        one: Pozostała mniej niż minuta
+        other: Pozostało mniej niż %{count} minut
+        many: Pozostało mniej niż %{count} minut
+      less_than_x_seconds:
+        few: Pozostały mniej niż %{count} sekundy
+        one: Pozostała mniej niż sekunda
+        other: Pozostało mniej niż %{count} sekund
+        many: Pozostało mniej niż %{count} sekund
+      over_x_years:
+        few: Pozostały ponad %{count} lata
+        one: Pozostał ponad rok
+        other: Pozostało ponad %{count} lat
+        many: Pozostało ponad %{count} lat
+      x_days:
+        few: Pozostały %{count} dni
+        one: Pozostał 1 dzień
+        other: Pozostało %{count} dni
+      x_minutes:
+        few: Pozostały %{count} minuty
+        one: Pozostała 1 minuta
+        other: Pozostało %{count} minut
+
+      x_months:
+        few: Pozostały %{count} miesiące
+        one: Pozostał 1 miesiąc
+        other: Pozostało %{count} miesięcy
+        many: Pozostało %{count} miesięcy
+      x_seconds:
+        few: Pozostały %{count} sekundy
+        one: Pozostała 1 sekunda
+        other: Pozostało %{count} sekund
+        many: Pozostało %{count} sekund
+    prompts:
+      day: Dzień
+      hour: Godzina
+      minute: Minuta
+      month: Miesiąc
+      second: Sekundy
+      year: Rok
+  errors:
+    format: ! '%{message}'
+    messages:
+      accepted: Proszę zaakceptować.
+      blank: Proszę uzupełnić.
+      confirmation: Powtórzone hasło nie jest zgodne.
+      empty: Proszę uzupełnić.
+      equal_to: musi być równe %{count}
+      even: musi być parzyste
+      exclusion: jest zarezerwowane
+      greater_than: kwota musi być większa niż %{count} zł.
+      greater_than_or_equal_to: musi być większe lub równe %{count}
+      inclusion: nie znajduje się na liście dopuszczalnych wartości
+      invalid: jest nieprawidłowe
+      less_than: musi być mniejsze od %{count}
+      less_than_or_equal_to: musi być mniejsze lub równe %{count}
+      not_a_number: Proszę wpisać liczbę.
+      not_an_integer: musi być liczbą całkowitą
+      odd: musi być nieparzyste
+      record_invalid: ! 'negatywne sprawdzenie poprawności: %{errors}'
+      taken: zostało już zajęte
+      too_long: jest za długie (maksymalnie %{count} znaków)
+      too_short: Hasło jest za krótkie.
+      wrong_length: ma nieprawidłową długość (powinna wynosić %{count} znaków)
+      negative_interest_rate: oprocentowanie skarbonki nie może być ujemne
+      negative_piggy_bank_payment_amount: saldo skarbonki musi być większe lub równe zeru
+      negative_piggy_bank_interest_amount: odsetki w skarbonce nie mogą być ujemne
+    template:
+      body: ! 'Błędy dotyczą następujących pól:'
+      header:
+        one: ! '%{model} nie został zachowany z powodu jednego błędu'
+        few: ! '%{model} nie został zachowany z powodu %{count} błędów'
+        other: ! '%{model} nie został zachowany z powodu %{count} błędów'
+        many: ! '%{model} nie został zachowany z powodu %{count} błędów'
+  helpers:
+    select:
+      prompt: Proszę wybrać
+    submit:
+      create: Utwórz
+      submit: Zapisz
+      update: Aktualizuj
+  number:
+    currency:
+      format:
+        delimiter: ! ' '
+        format: ! '%n %u'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: zł
+    format:
+      delimiter: ! ' '
+      precision: 3
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: Miliard
+          million: Milion
+          quadrillion: Biliard
+          thousand: Tysiąc
+          trillion: Bilion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: bajt
+            few: bajty
+            many: bajty
+            other: bajty
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ' oraz '
+      two_words_connector: ! ' i '
+      words_connector: ! ', '
+  time:
+    am: przed południem
+    formats:
+      date_time: ! '%d.%m.%Y %H:%M'
+      dnia: "%d.%m.%Y o godzinie %H:%M"
+      default: ! '%d.%m.%Y - %H:%M:%S'
+      old_default: ! '%a, %d %b %Y %H:%M:%S %z'
+      long: ! '%B %d, %Y %H:%M'
+      hour: '%H:%M'
+      short: ! '%d %b %H:%M'
+      date: '%d/%m/%Y'
+      date_dot: '%d.%m.%Y'
+      day_month: "%d/%m"
+      brackets: "%d/%m/%Y (%H:%M)"
+      long2: 'w dniu %d/%m/%Y o godzinie %H:%M'
+      long3: 'o godzinie %H:%M w dniu %d/%m/%Y'
+      month: '%B'
+      with_month_name: '%e %B %Y'
+      date_only_slashes: '"%d-%m-%Y'
+      date_slash_at_cest: "%d/%m/%Y at %H:%M CEST"
+      date_slash_cest: "%d/%m/%Y %H:%M CEST"
+
+    pm: po południu

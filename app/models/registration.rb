@@ -10,9 +10,6 @@ class Registration < ApplicationRecord
    ]
 
   validates :place,
-            :days,
-            :day_from,
-            :day_to,
             :return_home,
             :full_name,
             :birth_year,
@@ -20,13 +17,28 @@ class Registration < ApplicationRecord
             :school_name,
             :group_name,
             :parents_names,
-            :special_needs,
-            :health_status,
             :pesel,
-            :return_home_guardian,
             :email,
             :phone_number,
             :parents_address,
             presence: { message: "pole jest obowiązkowe" }
    validates :pesel, pesel: { message: 'nie jest prawidłowym numerem PESEL' }
+   validate :days_or_days_from_to_present
+   validate :return_home_guardian_present
+
+   private
+
+   def days_or_days_from_to_present
+     if days.blank? && day_from.blank?
+      errors.add(:days)
+      errors.add(:day_from)
+      errors.add(:day_to)
+     end
+   end
+
+   def return_home_guardian_present
+     if return_home == RETURN_HOME.last && return_home_guardian.blank?
+      errors.add(:return_home_guardian)
+     end
+   end
 end

@@ -2,12 +2,11 @@ doctype html
 html
   head
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+    meta charset="utf-8"
     title
       = content_for?(:title) ? yield(:title) : 'Trip Reg Sulej'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Trip Reg Sulej'}"
-    = stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
-    = csrf_meta_tags
+    = wicked_pdf_stylesheet_link_tag "application", :media => 'all'
   body
     main[role="main"]
       = render 'layouts/messages'

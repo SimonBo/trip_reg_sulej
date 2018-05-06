@@ -9,6 +9,6 @@ pl:
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Proszę poprawić informacje poniżej."
+      default_message: "Proszę uzupełnic pola zaznaczone na czerwono."
     # Labels and hints examples
     labels:

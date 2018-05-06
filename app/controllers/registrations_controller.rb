@@ -1,17 +1,19 @@
 class RegistrationsController < ApplicationController
   def index
-
   end
 
   def new
-    @registration = Registration.new
+    @registration = Registration.new(
+      place: Registration::PLACES.first,
+      return_home: Registration::RETURN_HOME.first
+      )
   end
 
   def create
     @registration = Registration.new(registration_params)
 
     if @registration.save
-      ActionMailer.send_card(registration: @registration).deliver_later
+      SendCardJob.perform_later(registration: @registration)
       redirect_to registrations_path
     else
       render :new
