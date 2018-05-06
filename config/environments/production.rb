@@ -77,8 +77,8 @@ Rails.application.configure do
     address: "umsulejowek.home.pl",
     port: 587,
     authentication: "plain",
-    user_name: 'arosa@umsulejowek.pl',
-    password: 'Arosa1O@'
+    user_name: ENV['email_username'],
+    password: ENV['email_password']
   }
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => Rails.application.secrets.domain_name }

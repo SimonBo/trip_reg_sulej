@@ -1,5 +1,6 @@
 class RegistrationsController < ApplicationController
   def index
+    redirect_to new_registration_path
   end
 
   def new
@@ -14,7 +15,7 @@ class RegistrationsController < ApplicationController
 
     if @registration.save
       SendCardJob.perform_later(registration: @registration)
-      redirect_to registrations_path
+      redirect_to thanks_path
     else
       render :new
     end

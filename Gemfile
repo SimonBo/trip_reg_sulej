@@ -56,3 +56,4 @@ gem 'activepesel'
 gem 'activeadmin'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem "figaro"
