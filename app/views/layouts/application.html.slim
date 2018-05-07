@@ -5,8 +5,7 @@ html
     title
       = content_for?(:title) ? yield(:title) : 'Trip Reg Sulej'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Trip Reg Sulej'}"
-    = stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = stylesheet_link_tag "application", :media => 'all'
     = csrf_meta_tags
   body
     main[role="main"]
