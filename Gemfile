@@ -58,3 +58,11 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem "figaro"
 gem 'email_validator'
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
+end
