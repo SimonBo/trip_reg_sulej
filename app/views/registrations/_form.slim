@@ -1,6 +1,13 @@
 - hide_submit = local_assigns.fetch :hide_submit, false
 - for_pdf = local_assigns.fetch :for_pdf, false
 
+- if for_pdf
+  scss:
+    input.form-control {
+      border: none;
+      margin-left: 0;
+    }
+
 = simple_form_for @registration, url: registrations_path do |f|
   = f.error_notification
   h3.text-center KARTA KWALIFIKACYJNA UCZESTNIKA WYPOCZYNKU
