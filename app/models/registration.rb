@@ -25,6 +25,7 @@ class Registration < ApplicationRecord
    validates :pesel, pesel: { message: 'nie jest prawidłowym numerem PESEL' }
    validate :days_or_days_from_to_present
    validate :return_home_guardian_present
+   validates :email, email: true
 
    private
 

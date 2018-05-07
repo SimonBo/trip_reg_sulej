@@ -91,6 +91,8 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
+    email_validator (1.6.0)
+      activemodel
     erubi (1.7.1)
     eventmachine (1.2.6)
     execjs (2.7.0)
@@ -359,6 +361,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   database_cleaner
+  email_validator
   factory_bot_rails
   faker
   figaro
