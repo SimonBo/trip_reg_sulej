@@ -6,7 +6,7 @@ html
     title
       = content_for?(:title) ? yield(:title) : 'Trip Reg Sulej'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Trip Reg Sulej'}"
-    = wicked_pdf_stylesheet_link_tag "application", :media => 'all'
+    = wicked_pdf_stylesheet_link_tag "application"
   body
     main[role="main"]
       = render 'layouts/messages'
