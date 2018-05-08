@@ -1,5 +1,5 @@
 class ActiveAdmin::BaseController
-  # http_basic_authenticate_with name: ENV['auth_name'], password: ENV['auth_pass']
+  http_basic_authenticate_with name: ENV['auth_name'], password: ENV['auth_pass']
 end
 
 ActiveAdmin.setup do |config|

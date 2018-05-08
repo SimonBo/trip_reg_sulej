@@ -10,4 +10,13 @@ ActiveAdmin.register Registration do
     pdf = WickedPdf.new.pdf_from_string template
     send_data pdf, type: "application/pdf", disposition: "inline"
   end
+
+  action_item only: :show do
+    link_to 'Wyślij email ponownie', [:resend, :admin, resource]
+  end
+
+  member_action :resend do
+    SendCardJob.perform_later(registration: resource)
+    redirect_to admin_registrations_path, notice: 'Email zostanie wkrótce wyslany.'
+  end
 end
