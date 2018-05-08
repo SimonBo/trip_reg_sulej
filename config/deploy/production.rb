@@ -1,9 +1,11 @@
 server '145.239.95.6', user: 'deploy', roles: %w{web app db}
 
-set :auth_name, Figaro.env.auth_name
-set :auth_pass, Figaro.env.auth_pass
-set :email_username, Figaro.env.email_username
-set :email_password, Figaro.env.email_password
+set :default_env, {
+  "auth_name" => Figaro.env.auth_name,
+  "auth_pass" => Figaro.env.auth_pass,
+  "email_username" => Figaro.env.email_username,
+  "email_password" => Figaro.env.email_password
+}
 
 # server-based syntax
 # ======================
