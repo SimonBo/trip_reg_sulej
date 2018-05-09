@@ -1,4 +1,4 @@
-server '145.239.95.6', user: 'deploy', roles: %w{web app db}
+server '217.182.74.119 ', user: 'deploy', roles: %w{web app db}
 
 # set :default_env, {
 #   "auth_name" => Figaro.env.auth_name,
