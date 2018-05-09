@@ -27,6 +27,14 @@ class Registration < ApplicationRecord
    validate :return_home_guardian_present
    validates :email, email: true
 
+   def input_or_value(field:, f:, for_pdf:, as: :text)
+    if for_pdf
+      self.send field
+    else
+      f.input field, wrapper: false, label: false, error: false, as: as
+    end
+   end
+
    private
 
    def days_or_days_from_to_present

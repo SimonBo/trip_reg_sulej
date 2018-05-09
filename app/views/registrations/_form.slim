@@ -44,31 +44,31 @@
   = f.input :place, collection: Registration::PLACES, as: :radio_buttons, label: ''
 
   p 2. Zgłaszam pobyt uczestnika (podać okres od dnia do dnia lub wyszczególnić poszczególne dni):
-  p.ml-3 w dniach #{ f.input :days, wrapper: false, label: false, error: false }
-  p.ml-3 lub od dnia #{ f.input :day_from, wrapper: false, label: false, error: false } do dnia #{ f.input :day_to, wrapper: false, label: false, error: false }
+  p.ml-3 w dniach #{ @registration.input_or_value(field: :days, f: f, for_pdf: for_pdf) }
+  p.ml-3 lub od dnia #{ @registration.input_or_value(field: :day_from, f: f, for_pdf: for_pdf, as: :string) } do dnia #{ @registration.input_or_value(field: :day_to, f: f, for_pdf: for_pdf, as: :string) }
 
   p 3. Powrót do domu (zaznaczyć odpowiednio):
   = f.input :return_home, collection: Registration::RETURN_HOME, as: :radio_buttons, label: ''
-  = f.input :return_home_guardian, label: false, error: false
+  = @registration.input_or_value(field: :return_home_guardian, f: f, for_pdf: for_pdf)
 
   h3 III. INFORMACJE DOTYCZĄCE UCZESTNIKA WYPOCZYNKU
-  p 1. Imię (imiona) i nazwisko #{ f.input :full_name, wrapper: false, label: false, error: false }
-  p 2. Rok urodzenia #{ f.input :birth_year, wrapper: false, label: false, error: false }
-  p 3. Adres zamieszkania #{ f.input :address, wrapper: false, label: false, error: false }
-  p 4. Nazwa i adres szkoły, do której dziecko uczęszcza w roku szkolnym 2017/2018 #{ f.input :school_name, wrapper: false, label: false, error: false } klasa #{ f.input :group_name, wrapper: false, label: false, error: false }
-  p 5. Imiona i nazwiska rodziców #{ f.input :parents_names, wrapper: false, label: false, error: false }
-  p 6. Adres zamieszkania lub pobytu rodziców w czasie trwania wypoczynku #{ f.input :parents_address, wrapper: false, label: false, error: false }
+  p 1. Imię (imiona) i nazwisko #{ @registration.input_or_value(field: :full_name, f: f, for_pdf: for_pdf) }
+  p 2. Rok urodzenia #{ @registration.input_or_value(field: :birth_year, f: f, for_pdf: for_pdf) }
+  p 3. Adres zamieszkania #{ @registration.input_or_value(field: :address, f: f, for_pdf: for_pdf) }
+  p 4. Nazwa i adres szkoły, do której dziecko uczęszcza w roku szkolnym 2017/2018 #{ @registration.input_or_value(field: :school_name, f: f, for_pdf: for_pdf) } klasa #{ @registration.input_or_value(field: :group_name, f: f, for_pdf: for_pdf) }
+  p 5. Imiona i nazwiska rodziców #{ @registration.input_or_value(field: :parents_names, f: f, for_pdf: for_pdf) }
+  p 6. Adres zamieszkania lub pobytu rodziców w czasie trwania wypoczynku #{ @registration.input_or_value(field: :parents_address, f: f, for_pdf: for_pdf) }
   p
     | 7. Numer
     b  telefonu
-    |  kontaktowego rodziców #{ f.input :phone_number, wrapper: false, label: false, error: false }
+    |  kontaktowego rodziców #{ @registration.input_or_value(field: :phone_number, f: f, for_pdf: for_pdf) }
   p
     | 8.
     b  Adres e-mail
-    |  niezbędny do korespondencji #{ f.input :email, wrapper: false, label: false, error: false }
-  p 9. Informacja o specjalnych potrzebach edukacyjnych uczestnika wypoczynku,  w szczególności o potrzebach wynikających z niepełnosprawności, niedostosowania społecznego lub zagrożenia niedostosowaniem społecznym #{ f.input :special_needs, wrapper: false, label: false, error: false }
-  p 10. Istotne dane o stanie zdrowia uczestnika wypoczynku, rozwoju psychofizycznym i stosowanej diecie (np. na co uczestnik jest uczulony, jak znosi jazdę samochodem, czy przyjmuje stale leki i w jakich dawkach, czy nosi aparat ortodontyczny lub okulary, czy może brać udział w zajęciach rekreacyjnych, czy nie ma przeciwwskazań lekarskich do ćwiczeń ruchowych, w tym do pływania) #{ f.input :health_status, wrapper: false, label: false, error: false }
-  p oraz numer PESEL uczestnika wypoczynku #{ f.input :pesel, wrapper: false, label: false, error: false }
+    |  niezbędny do korespondencji #{ @registration.input_or_value(field: :email, f: f, for_pdf: for_pdf, as: :email) }
+  p 9. Informacja o specjalnych potrzebach edukacyjnych uczestnika wypoczynku,  w szczególności o potrzebach wynikających z niepełnosprawności, niedostosowania społecznego lub zagrożenia niedostosowaniem społecznym #{ @registration.input_or_value(field: :special_needs, f: f, for_pdf: for_pdf) }
+  p 10. Istotne dane o stanie zdrowia uczestnika wypoczynku, rozwoju psychofizycznym i stosowanej diecie (np. na co uczestnik jest uczulony, jak znosi jazdę samochodem, czy przyjmuje stale leki i w jakich dawkach, czy nosi aparat ortodontyczny lub okulary, czy może brać udział w zajęciach rekreacyjnych, czy nie ma przeciwwskazań lekarskich do ćwiczeń ruchowych, w tym do pływania) #{ @registration.input_or_value(field: :health_status, f: f, for_pdf: for_pdf) }
+  p oraz numer PESEL uczestnika wypoczynku #{ @registration.input_or_value(field: :pesel, f: f, for_pdf: for_pdf, as: :string) }
 
   p.bold Wyrażam zgodę na przetwarzanie danych osobowych zawartych w karcie kwalifikacyjnej na potrzeby niezbędne do zapewnienia bezpieczeństwa i ochrony zdrowia uczestnika wypoczynku (zgodnie z ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2016 r. poz. 922, z późn. zm.).
 
