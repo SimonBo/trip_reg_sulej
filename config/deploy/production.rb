@@ -1,12 +1,5 @@
 server '217.182.74.119 ', user: 'deploy', roles: %w{web app db}
 
-# set :default_env, {
-#   "auth_name" => Figaro.env.auth_name,
-#   "auth_pass" => Figaro.env.auth_pass,
-#   "email_username" => Figaro.env.email_username,
-#   "email_password" => Figaro.env.email_password
-# }
-
 namespace :figaro do
   desc "SCP transfer figaro configuration to the shared folder"
   task :setup do
