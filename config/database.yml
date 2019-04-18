@@ -10,6 +10,9 @@ default: &default
 development:
   <<: *default
   database: trip_reg_sulej_development
+  password: szymon666
+  username: postgres
+  host: localhost
 
 
 test:
