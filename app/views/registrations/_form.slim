@@ -14,11 +14,11 @@
 
   h3 I. INFORMACJE DOTYCZĄCE WYPOCZYNKU
   p 1. Forma wypoczynku: półkolonia
-  p 2. Termin wypoczynku 25.06.2018 r. – 10.08.2018 r.
+  p 2. Termin wypoczynku 01.07.2019 r. – 14.08.2019 r.
   p 3. Adres wypoczynku, miejsce lokalizacji wypoczynku
   ol
-    li Szkoła Podstawowa nr 3 im. Marszałka Józefa Piłsudskiego 05-071 Sulejówek ul. Głowackiego 47
-    li Szkoła Podstawowa nr 1 im. Pierwszego Marszałka Polski Józefa Piłsudskiego 05-070 Sulejówek ul. Idzikowskiego 2a
+    li Szkoła Podstawowa nr 1 im. Pierwszego Marszałka Polski Józefa Piłsudskiego, 05-070 Sulejówek ul. Idzikowskiego 2a
+    li Szkoła Podstawowa nr 4 im. Janusza Korczaka, 05-071 Sulejówek ul. Narutowicza 10
 
   - if for_pdf
     p.text-center
@@ -55,7 +55,7 @@
   p 1. Imię (imiona) i nazwisko #{ @registration.input_or_value(field: :full_name, f: f, for_pdf: for_pdf) }
   p 2. Rok urodzenia #{ @registration.input_or_value(field: :birth_year, f: f, for_pdf: for_pdf) }
   p 3. Adres zamieszkania #{ @registration.input_or_value(field: :address, f: f, for_pdf: for_pdf) }
-  p 4. Nazwa i adres szkoły, do której dziecko uczęszcza w roku szkolnym 2017/2018 #{ @registration.input_or_value(field: :school_name, f: f, for_pdf: for_pdf) } klasa #{ @registration.input_or_value(field: :group_name, f: f, for_pdf: for_pdf) }
+  p 4. Nazwa i adres szkoły, do której dziecko uczęszcza w roku szkolnym 2018/2019 #{ @registration.input_or_value(field: :school_name, f: f, for_pdf: for_pdf) } klasa #{ @registration.input_or_value(field: :group_name, f: f, for_pdf: for_pdf) }
   p 5. Imiona i nazwiska rodziców #{ @registration.input_or_value(field: :parents_names, f: f, for_pdf: for_pdf) }
   p 6. Adres zamieszkania lub pobytu rodziców w czasie trwania wypoczynku #{ @registration.input_or_value(field: :parents_address, f: f, for_pdf: for_pdf) }
   p
@@ -70,7 +70,7 @@
   p 10. Istotne dane o stanie zdrowia uczestnika wypoczynku, rozwoju psychofizycznym i stosowanej diecie (np. na co uczestnik jest uczulony, jak znosi jazdę samochodem, czy przyjmuje stale leki i w jakich dawkach, czy nosi aparat ortodontyczny lub okulary, czy może brać udział w zajęciach rekreacyjnych, czy nie ma przeciwwskazań lekarskich do ćwiczeń ruchowych, w tym do pływania) #{ @registration.input_or_value(field: :health_status, f: f, for_pdf: for_pdf) }
   p oraz numer PESEL uczestnika wypoczynku #{ @registration.input_or_value(field: :pesel, f: f, for_pdf: for_pdf, as: :string) }
 
-  p.bold Wyrażam zgodę na przetwarzanie danych osobowych zawartych w karcie kwalifikacyjnej na potrzeby niezbędne do zapewnienia bezpieczeństwa i ochrony zdrowia uczestnika wypoczynku (zgodnie z ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2016 r. poz. 922, z późn. zm.).
+  p.bold Wyrażam zgodę na przetwarzanie danych osobowych zawartych w karcie kwalifikacyjnej na potrzeby niezbędne do zapewnienia bezpieczeństwa i ochrony zdrowia uczestnika wypoczynku (zgodnie z ustawą z dnia 10 maja 2018 r. o ochronie danych osobowych (Dz. U. z 2018 r. Nr 1000 z późn. zm.).
 
   .row style='margin-top: 50px;'
     - if for_pdf
@@ -120,3 +120,14 @@
   - unless hide_submit
     .text-center.mt-5
       = f.submit 'Wyślij zgłoszenie', class: 'btn btn-primary mb-5'
+
+  p style='font-size: 0.8rem;' Zgodnie z art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) informujemy, że:
+  ol style='font-size: 0.8rem;'
+    li dane osobowe zawarte w karcie kwalifikacyjnej będą przetwarzane przez Miasto Sulejówek, ul. Dworcowa 55, 05-070 Sulejówek w celu organizacji wypoczynku dla dzieci i młodzieży w czasie ferii letnich w formie półkolonii;
+    li osobie, której dane dotyczą, przysługuje prawo dostępu do ich treści oraz ich poprawiania, uzupełniania, uaktualniania, sprostowania danych osobowych, czasowego lub stałego wstrzymania ich przetwarzania lub ich usunięcia; 
+    li Administratorem danych osobowych jest Miasto Sulejówek, ul. Dworcowa 55, 05-070 Sulejówek;
+    li dane osobowe będą przetwarzane przez Urząd Miasta Sulejówek przez minimum 10 lat, a następnie w Archiwum Zakładowym, gdzie po upływie okresu przechowywania i stwierdzeniu utraty znaczenia, w tym wartości dowodowej dla Miasta Sulejówek, ekspertyzie i otrzymaniu zgody Archiwum Państwowego, zostaną poddane brakowaniu zgodnie z ustawą z dnia 14 lipca 1983 r. o narodowym zasobie archiwalnym i archiwach, i Rozporządzeniem  Prezesa Rady Ministrów z dnia 18 stycznia 2011 r. w sprawie instrukcji kancelaryjnej, jednolitych rzeczowych wykazów akt oraz instrukcji w sprawie organizacji i zakresu działania archiwów zakładowych;
+    li w sprawach ochrony danych osobowych można kontaktować się z Inspektorem Ochrony Danych Urzędu Miasta Sulejówek (iod@umsulejowek.pl) lub pisemnie na adres ul. Dworcowa 55, 05-070 Sulejówek;
+    li Administrator nie ma zamiaru przekazywać danych osobowych do państwa trzeciego lub organizacji międzynarodowej;
+    li osoba, której dane dotyczą, ma prawo wniesienia skargi do organu nadzorczego, Prezesa Urzędu Ochrony Danych Osobowych;
+    li dane osobowe nie będą podlegały zautomatyzowanemu podejmowaniu decyzji, w tym profilowaniu.

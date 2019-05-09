@@ -6,6 +6,6 @@ class ApplicationMailer < ActionMailer::Base
     registration = registration
     attachments['zgłoszenie.pdf'] = pdf
     mail to: registration.email,
-         subject: "Lato w mieście Sulejówek 2018"
+         subject: "Lato w mieście Sulejówek 2019"
   end
 end

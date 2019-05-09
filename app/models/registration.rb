@@ -1,7 +1,7 @@
 class Registration < ApplicationRecord
   PLACES = [
-   "Szkoła Podstawowa nr 3 im. Marszałka Józefa Piłsudskiego 05-071 Sulejówek ul. Głowackiego 47",
-   "Szkoła Podstawowa nr 1 im. Pierwszego Marszałka Polski Józefa Piłsudskiego 05-070 Sulejówek ul. Idzikowskiego 2a"
+   "Szkoła Podstawowa nr 1 im. Pierwszego Marszałka Polski Józefa Piłsudskiego, 05-070 Sulejówek ul. Idzikowskiego 2a",
+   "Szkoła Podstawowa nr 4 im. Janusza Korczaka, 05-071 Sulejówek ul. Narutowicza 10"
    ]
 
   RETURN_HOME = [
